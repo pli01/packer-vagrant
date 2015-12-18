@@ -8,3 +8,6 @@ Inspired from https://github.com/flomotlik/packer-example.git
 * download & install packer in THIS_DIR/bin
 * download & install vagrant
 * launch: debian/create_box
+
+## Tested
+* MacOSX
