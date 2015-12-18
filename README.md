@@ -9,5 +9,5 @@ Inspired from https://github.com/flomotlik/packer-example.git
 * download & install vagrant
 * launch: debian/create_box
 
-## Tested
+## Tested on
 * MacOSX

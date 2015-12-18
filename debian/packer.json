@@ -49,7 +49,9 @@
 			}
 		},
 		"scripts": [
-			"scripts/root_setup.sh"
+			"scripts/root_setup.sh",
+			"scripts/cleanup.sh",
+			"scripts/zerodisk.sh"
 		],
 		"type": "shell"
 	}]
