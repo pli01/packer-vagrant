@@ -3,10 +3,11 @@
 set -e
 
 #export PACKER_LOG=1
-#rm packer_virtualbox-iso_virtualbox.box || true
+rm packer_virtualbox-iso_virtualbox.box || true
 
 $(pwd)/../bin/packer validate -only virtualbox-iso packer.json && \
 $(pwd)/../bin/packer build -only virtualbox-iso packer.json
 
-#vagrant box remove vagrant_machine || true
-#vagrant box add vagrant_machine packer_virtualbox-iso_virtualbox.box
+vagrant box remove debian-8.2.0-amd64 || true
+vagrant box add debian-8.2.0-amd64 packer_virtualbox-iso_virtualbox.box 
+

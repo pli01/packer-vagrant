@@ -2,16 +2,15 @@
 
 set -e
 
-export DEBIAN_FRONTEND=noninteractive
 # Updating and Upgrading dependencies
-sudo apt-get update -y -qq > /dev/null
-sudo apt-get upgrade -y -qq > /dev/null
+sudo DEBIAN_FRONTEND=noninteractive apt-get update -y -qq > /dev/null
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y -qq > /dev/null
 
 # Install necessary libraries for guest additions and Vagrant NFS Share
-sudo apt-get -y -q install linux-headers-$(uname -r) build-essential dkms nfs-common
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install linux-headers-$(uname -r) build-essential dkms nfs-common
 
 # Install necessary dependencies
-sudo apt-get -y -q install curl wget git vim unzip
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install curl wget git vim unzip
 
 # Tweak sshd to prevent DNS resolution (speed up logins)
 echo 'UseDNS no' >> /etc/ssh/sshd_config
